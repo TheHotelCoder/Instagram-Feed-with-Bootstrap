@@ -1,0 +1,147 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+	<title>Instagram Feed with Bootstrap</title>
+</head>
+
+<body>
+	<div class="container-fluid" style="background-color: #EDEDED;">
+		<div class="row">
+			<!-- nav bar IF I USE FIXED THE MODAL IS BROKEN AND THE SECOND ROW NO SE VE -->
+			<nav class="d-flex flex-row justify-content-between col-12 mx-auto navbar navbar-expand-lg navbar-light bg-light" style="background-color: 	#F0F0F0">
+				<!-- First box of navbar -->
+				<div class="d-flex align-items-center"> <i class="nav-item font-weight-bold fab fa-instagram" style="font-size: 30px;"></i>
+					<h3 class="nav-item font-italic ml-2">Instagram</h3>
+				</div>
+				<!-- Second box of navbar. -->
+				<div class="d-flex align-items-center">
+					<!-- Create a new post MODAL -->
+					<input class="nav-item btn btn-success" type="button" data-toggle="modal" data-target="#exampleModal" value="Create a new post">
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content container-fluid">
+								<div class="modal-body">
+									<div class="row mb-2">
+										<textarea id="comments" name="comments" class="col-12" rows="3"></textarea>
+									</div>
+									<div class="row">
+										<button class="col-1 btn btn-outline-dark mr-1 pl-0 pr-0"><i class="fas fa-camera"></i>
+										</button>
+										<button class="col-1 btn btn-outline-dark pl-0 pr-0"><i class="fas fa-map-marker-alt"></i>
+										</button>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+									<button type="button" class="btn btn-success">Publish</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Dropdown nav bar menu ITS BROKEN! -->
+					<div class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"></i></a>
+						<div class="dropdown-menu position-absolute " aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+							<div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Log out</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!-- display menu -->
+		<div class="row p-3" style="background-color: #E8E8E8">
+			<nav class="col-12 d-flex justify-content-center">
+				<div class="nav nav-tabs" id="nav-tab" role="tablist"> <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fas fa-calendar"></i></a>
+					<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fas fa-calendar-alt"></i></a>
+				</div>
+			</nav>
+		</div>
+		<div class="tab-content" id="nav-tabContent">
+			<!--Single post display-->
+			<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+				<!-- Single post 1-->
+				<div class="row mt-3">
+					<div class="card col-6 mx-auto p-0 mb-5" style="width: 18rem;">
+						<div class="card-body p-0">
+							<h5 class="card-title d-inline-block p-1 ">My first cat post</h5>
+							<p class="d-inline-block float-right font-weight-light p-1">12/14</p>
+							<img src="https://preview.redd.it/oroa8t4edqi61.jpg?width=640&crop=smart&auto=webp&s=1147087fbd8b2740e915c6d9566f5e48779dcc9c" class="card-img" alt="Chonker Cat laying on the stairs.">
+							<p class="card-text pl-1 mb-1 font-weight-bold">23 likes</p>
+							<p class="card-text pl-1 pr-1 mb-1">First photo of the feed! This is a multi line commment for testing purposes. I am learning to code. Be gentle.</p>
+							<div class="container-fluid mt-2">
+								<div class="row d-flex align-items-stretch mb-2"> <a href="#" class="col-1 btn btn-outline-light" style="color: red;"><i class="far fa-heart"></i></a>
+									<input type="text" class="col-10 font-weight-light" placeholder="Comment" style="border: none;"></input> <i class="col-1 fas fa-ellipsis-v p-0 text-center"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Single post 2 -->
+				<div class="row">
+					<div class="card col-6 mx-auto p-0 mb-5" style="width: 18rem;">
+						<div class="card-body p-0">
+							<h5 class="card-title d-inline-block p-1 ">My first cat post</h5>
+							<p class="d-inline-block float-right font-weight-light p-1">12/14</p>
+							<img src="https://preview.redd.it/oxcgh3l3yli61.jpg?width=640&crop=smart&auto=webp&s=1c5444c0d2d44e962ecfc75129c0f09d990d74c5" class="card-img" alt="Chonker Cat laying on the stairs.">
+							<p class="card-text pl-1 mb-1 font-weight-bold">23 likes</p>
+							<p class="card-text pl-1 pr-1 mb-1">First photo of the feed! This is a multi line commment for testing purposes. I am learning to code. Be gentle.</p>
+							<div class="container-fluid mt-2">
+								<div class="row d-flex align-items-stretch mb-2"> <a href="#" class="col-1 btn btn-outline-light" style="color: red;"><i class="far fa-heart"></i></a>
+									<input type="text" class="col-10 font-weight-light" placeholder="Comment" style="border: none;"></input> <i class="col-1 fas fa-ellipsis-v p-0 text-center"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Single post 3 -->
+				<div class="row">
+					<div class="card col-6 mx-auto p-0 mb-5" style="width: 18rem;">
+						<div class="card-body p-0">
+							<h5 class="card-title d-inline-block p-1 ">My first cat post</h5>
+							<p class="d-inline-block float-right font-weight-light p-1">12/14</p>
+							<img src="https://i.redd.it/4qo6wkzrjpi61.jpg" class="card-img" alt="Chonker Cat laying on the stairs.">
+							<p class="card-text pl-1 mb-1 font-weight-bold">23 likes</p>
+							<p class="card-text pl-1 pr-1 mb-1">First photo of the feed! This is a multi line commment for testing purposes. I am learning to code. Be gentle.</p>
+							<div class="container-fluid mt-2">
+								<div class="row d-flex align-items-stretch mb-2"> <a href="#" class="col-1 btn btn-outline-light" style="color: red;"><i class="far fa-heart"></i></a>
+									<input type="text" class="col-10 font-weight-light" placeholder="Comment" style="border: none;"></input> <i class="col-1 fas fa-ellipsis-v p-0 text-center"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Grid post display-->
+			<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+			<div class="row">
+				<img src="https://preview.redd.it/oroa8t4edqi61.jpg?width=640&crop=smart&auto=webp&s=1147087fbd8b2740e915c6d9566f5e48779dcc9c" alt="..." class="img-thumbnail col-3 p-0">
+				<img src="https://preview.redd.it/oxcgh3l3yli61.jpg?width=640&crop=smart&auto=webp&s=1c5444c0d2d44e962ecfc75129c0f09d990d74c5" alt="..." class="img-thumbnail col-3  p-0">
+				<img src="https://i.redd.it/4qo6wkzrjpi61.jpg" alt="..." class="img-thumbnail col-3   p-0 image-responsive">
+				<img src="https://preview.redd.it/oroa8t4edqi61.jpg?width=640&crop=smart&auto=webp&s=1147087fbd8b2740e915c6d9566f5e48779dcc9c" alt="..." class="img-thumbnail col-3  p-0">
+				<div class="row mt-1">
+					<img src="https://preview.redd.it/oroa8t4edqi61.jpg?width=640&crop=smart&auto=webp&s=1147087fbd8b2740e915c6d9566f5e48779dcc9c" alt="..." class="img-thumbnail col-3  p-0">
+					<img src="https://preview.redd.it/oxcgh3l3yli61.jpg?width=640&crop=smart&auto=webp&s=1c5444c0d2d44e962ecfc75129c0f09d990d74c5" alt="..." class="img-thumbnail col-3 p-0">
+					<img src="https://i.redd.it/4qo6wkzrjpi61.jpg" alt="..." class="img-fluid img-thumbnail col-3 p-0 ">
+					<img src="https://preview.redd.it/oroa8t4edqi61.jpg?width=640&crop=smart&auto=webp&s=1147087fbd8b2740e915c6d9566f5e48779dcc9c" alt="..." class="img-thumbnail col-3 p-0">
+				</div>
+				<div class="row mt-1">
+					<img src="https://preview.redd.it/oroa8t4edqi61.jpg?width=640&crop=smart&auto=webp&s=1147087fbd8b2740e915c6d9566f5e48779dcc9c" alt="..." class="img-thumbnail col-3  p-0">
+					<img src="https://preview.redd.it/oxcgh3l3yli61.jpg?width=640&crop=smart&auto=webp&s=1c5444c0d2d44e962ecfc75129c0f09d990d74c5" alt="..." class="img-thumbnail col-3  p-0">
+					<img src="https://i.redd.it/4qo6wkzrjpi61.jpg" alt="..." class="img-thumbnail col-3   p-0 image-responsive">
+					<img src="https://preview.redd.it/oroa8t4edqi61.jpg?width=640&crop=smart&auto=webp&s=1147087fbd8b2740e915c6d9566f5e48779dcc9c" alt="..." class="img-thumbnail col-3  p-0">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---Bootstrap JS file DON'T REMOVE THIS FILES-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
