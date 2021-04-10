@@ -12,7 +12,7 @@
 	<div class="container-fluid" style="background-color: #EDEDED;">
 		<div class="row">
 			<!-- nav bar IF I USE FIXED THE MODAL IS BROKEN AND THE SECOND ROW NO SE VE -->
-			<nav class="d-flex flex-row justify-content-between col-12 mx-auto navbar navbar-expand-lg navbar-light bg-light" style="background-color: 	#F0F0F0">
+			<nav class="fixed-top d-flex flex-row justify-content-between col-12 mx-auto navbar navbar-expand-lg navbar-light bg-light" style="background-color: 	#F0F0F0">
 				<!-- First box of navbar -->
 				<div class="d-flex align-items-center"> <i class="nav-item font-weight-bold fab fa-instagram" style="font-size: 30px;"></i>
 					<h3 class="nav-item font-italic ml-2">Instagram</h3>
@@ -21,7 +21,19 @@
 				<div class="d-flex align-items-center">
 					<!-- Create a new post MODAL -->
 					<input class="nav-item btn btn-success" type="button" data-toggle="modal" data-target="#exampleModal" value="Create a new post">
-					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<!-- Dropdown nav bar menu TODO: CAMBIAR TIPO DE BOTON BUSCAR BOOTSTRAP. -->
+					<div class="nav-item "> <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"></i></a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> 
+                            <a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div> 
+                            <a class="dropdown-item" href="#">Log out</a>
+						</div>
+					</div>
+				</div>
+            </nav>
+            		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						<div class="modal-dialog" role="document">
 							<div class="modal-content container-fluid">
 								<div class="modal-body">
@@ -42,19 +54,9 @@
 							</div>
 						</div>
 					</div>
-					<!-- Dropdown nav bar menu ITS BROKEN! -->
-					<div class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"></i></a>
-						<div class="dropdown-menu position-absolute " aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<a class="dropdown-item" href="#">Something else here</a>
-							<div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Log out</a>
-						</div>
-					</div>
-				</div>
-			</nav>
 		</div>
 		<!-- display menu -->
-		<div class="row p-3" style="background-color: #E8E8E8">
+		<div class="row p-3 mt-5" style="background-color: #E8E8E8;">
 			<nav class="col-12 d-flex justify-content-center">
 				<div class="nav nav-tabs" id="nav-tab" role="tablist"> <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fas fa-calendar"></i></a>
 					<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fas fa-calendar-alt"></i></a>
@@ -75,7 +77,7 @@
 							<p class="card-text pl-1 pr-1 mb-1">First photo of the feed! This is a multi line commment for testing purposes. I am learning to code. Be gentle.</p>
 							<div class="container-fluid mt-2">
 								<div class="row d-flex align-items-stretch mb-2"> <a href="#" class="col-1 btn btn-outline-light" style="color: red;"><i class="far fa-heart"></i></a>
-									<input type="text" class="col-10 font-weight-light" placeholder="Comment" style="border: none;"></input> <i class="col-1 fas fa-ellipsis-v p-0 text-center"></i>
+									<input type="text" class="col-10 font-weight-light" placeholder="Comment" style="border: none;"></input> <i class="col-1 fas fa-ellipsis-v p-0 text-center mt-2"></i>
 								</div>
 							</div>
 						</div>
@@ -92,7 +94,7 @@
 							<p class="card-text pl-1 pr-1 mb-1">First photo of the feed! This is a multi line commment for testing purposes. I am learning to code. Be gentle.</p>
 							<div class="container-fluid mt-2">
 								<div class="row d-flex align-items-stretch mb-2"> <a href="#" class="col-1 btn btn-outline-light" style="color: red;"><i class="far fa-heart"></i></a>
-									<input type="text" class="col-10 font-weight-light" placeholder="Comment" style="border: none;"></input> <i class="col-1 fas fa-ellipsis-v p-0 text-center"></i>
+									<input type="text" class="col-10 font-weight-light" placeholder="Comment" style="border: none;"></input> <i class="col-1 fas fa-ellipsis-v p-0 text-center mt-2"></i>
 								</div>
 							</div>
 						</div>
@@ -109,7 +111,7 @@
 							<p class="card-text pl-1 pr-1 mb-1">First photo of the feed! This is a multi line commment for testing purposes. I am learning to code. Be gentle.</p>
 							<div class="container-fluid mt-2">
 								<div class="row d-flex align-items-stretch mb-2"> <a href="#" class="col-1 btn btn-outline-light" style="color: red;"><i class="far fa-heart"></i></a>
-									<input type="text" class="col-10 font-weight-light" placeholder="Comment" style="border: none;"></input> <i class="col-1 fas fa-ellipsis-v p-0 text-center"></i>
+									<input type="text" class="col-10 font-weight-light" placeholder="Comment" style="border: none;"></input> <i class="col-1 fas fa-ellipsis-v p-0 text-center mt-2"></i>
 								</div>
 							</div>
 						</div>
@@ -117,11 +119,11 @@
 				</div>
 			</div>
 			<!--Grid post display-->
-			<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+			<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 			<div class="row">
 				<img src="https://preview.redd.it/oroa8t4edqi61.jpg?width=640&crop=smart&auto=webp&s=1147087fbd8b2740e915c6d9566f5e48779dcc9c" alt="..." class="img-thumbnail col-3 p-0">
 				<img src="https://preview.redd.it/oxcgh3l3yli61.jpg?width=640&crop=smart&auto=webp&s=1c5444c0d2d44e962ecfc75129c0f09d990d74c5" alt="..." class="img-thumbnail col-3  p-0">
-				<img src="https://i.redd.it/4qo6wkzrjpi61.jpg" alt="..." class="img-thumbnail col-3   p-0 image-responsive">
+				<img src="https://i.redd.it/4qo6wkzrjpi61.jpg" alt="..." class="img-thumbnail col-3 p-0">
 				<img src="https://preview.redd.it/oroa8t4edqi61.jpg?width=640&crop=smart&auto=webp&s=1147087fbd8b2740e915c6d9566f5e48779dcc9c" alt="..." class="img-thumbnail col-3  p-0">
 				<div class="row mt-1">
 					<img src="https://preview.redd.it/oroa8t4edqi61.jpg?width=640&crop=smart&auto=webp&s=1147087fbd8b2740e915c6d9566f5e48779dcc9c" alt="..." class="img-thumbnail col-3  p-0">
@@ -136,7 +138,8 @@
 					<img src="https://preview.redd.it/oroa8t4edqi61.jpg?width=640&crop=smart&auto=webp&s=1147087fbd8b2740e915c6d9566f5e48779dcc9c" alt="..." class="img-thumbnail col-3  p-0">
 				</div>
 			</div>
-		</div>
+        </div>
+        </div>
 	</div>
 	<!---Bootstrap JS file DON'T REMOVE THIS FILES-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
